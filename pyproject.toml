@@ -1,0 +1,19 @@
+[project]
+name = "qtupdate"
+dynamic = ["version"]
+description = "A simple web crawler with auto-update functionality"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyside6>=6.7.2",
+    "requests>=2.32.3",
+    "beautifulsoup4>=4.12.0",
+    "packaging>=23.0",
+]
+
+[tool.hatch.version]
+path = "src/qtupdate/__version__.py"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
