@@ -16,7 +16,9 @@ def get_current_version():
 def check_for_updates():
     try:
         response = requests.get(VERSION_FILE_URL)
-        latest_version = response.text.strip()
+        latest_version_text = response.text.strip()
+        # Extract version number from the text
+        latest_version = latest_version_text.split('=')[1].strip().strip('"')
         current_version = get_current_version()
 
         if version.parse(latest_version) > version.parse(current_version):

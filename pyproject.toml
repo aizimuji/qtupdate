@@ -12,7 +12,12 @@ dependencies = [
 ]
 
 [tool.hatch.version]
-path = "src/qtupdate/__version__.py"
+path = "version.txt"
+
+[tool.uv]
+dev-dependencies = [
+    "pyinstaller",
+]
 
 [build-system]
 requires = ["hatchling"]
